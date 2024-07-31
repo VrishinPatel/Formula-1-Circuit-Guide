@@ -1,5 +1,5 @@
 const express = require('express');
-const Circuit = require('../models/Circuit');  // Correct spelling here
+const Circuit = require('../models/Circuit');
 const router = express.Router();
 
 // Get all circuits
@@ -18,10 +18,9 @@ router.post('/', async (req, res) => {
     name: req.body.name,
     location: req.body.location,
     length_km: req.body.length_km,
-    number_of_turns: req.body.number_of_turns,
-    track_layout_url: req.body.track_layout_url,
-    historical_significance: req.body.historical_significance,
-    famous_races: req.body.famous_races
+    type: req.body.type,
+    turns: req.body.turns,
+    lap_record: req.body.lap_record
   });
   try {
     const newCircuit = await circuit.save();
