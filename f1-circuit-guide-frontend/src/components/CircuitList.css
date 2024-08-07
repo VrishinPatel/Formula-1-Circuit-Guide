@@ -1,0 +1,112 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #141414; /* Dark background for an F1 theme */
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #e10600; /* F1 red */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+.circuit-list {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.circuit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circuit-card {
+  background-color: #1c1c1c; /* Dark card background */
+  border: 2px solid #e10600; /* F1 red border */
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.circuit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #e10600, #ffffff, #e10600);
+}
+
+.circuit-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.circuit-detail {
+  margin: 20px;
+  padding: 20px;
+  text-align: left;
+  border: 2px solid #e10600; /* F1 red */
+  border-radius: 8px;
+  background-color: #2a2a2a; /* Slightly lighter dark for contrast */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.track-layout {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.additional-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.back-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #e10600; /* F1 red */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #b50500;
+}
+
+footer {
+  margin-top: 20px;
+  color: #888888;
+  font-size: 0.9rem;
+  text-align: center;
+}

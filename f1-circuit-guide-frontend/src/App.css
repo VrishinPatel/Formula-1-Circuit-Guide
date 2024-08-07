@@ -1,0 +1,58 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c; /* Dark background for an F1 theme */
+  color: #ffffff; /* White text for contrast */
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #e10600; /* F1 red */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid #e10600; /* F1 red border */
+  background-color: #333333; /* Dark gray for inactive tabs */
+  color: #ffffff;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tabs button.active {
+  background-color: #e10600; /* Active tab with F1 red */
+  color: #ffffff;
+}
+
+.content {
+  padding: 20px;
+  background-color: #1c1c1c; /* Dark background for content */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #e10600;
+  color: #ffffff;
+}
+
+footer {
+  margin-top: 20px;
+  color: #888888; /* Light gray for footer */
+}
