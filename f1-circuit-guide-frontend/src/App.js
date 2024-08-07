@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import './App.css';
 import CircuitList from './components/CircuitList';
@@ -53,5 +54,16 @@ const App = () => {
     </div>
   );
 };
+=======
+import React from 'react';
+import CircuitList from './components/CircuitList';
+import './App.css';
+
+const App = () => (
+  <div className="App">
+    <CircuitList />
+  </div>
+);
+>>>>>>> origin/main
 
 export default App;

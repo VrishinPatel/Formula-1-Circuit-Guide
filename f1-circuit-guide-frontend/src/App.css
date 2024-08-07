@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: 'Arial', sans-serif;
   background-color: #1c1c1c; /* Dark background for an F1 theme */
@@ -55,4 +56,9 @@ button:hover {
 footer {
   margin-top: 20px;
   color: #888888; /* Light gray for footer */
+=======
+/* src/App.css */
+.App {
+  text-align: center;
+>>>>>>> origin/main
 }
