@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import './App.css';
 import CircuitList from './components/CircuitList';
 import TrackVisualization from './components/TrackVisualization';
 import GlobeVisualization from './components/GlobeVisualization';
+import RaceCalendar from './components/RaceCalendar';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('globe');
@@ -15,12 +15,9 @@ const App = () => {
       case 'visualization':
         return <TrackVisualization />;
       case 'globe':
-        return (
-          <div style={{ position: 'relative' }}>
-            <GlobeVisualization />
-            <div className="overlay-text">Powered by F1 Insights</div>
-          </div>
-        );
+        return <GlobeVisualization />;
+      case 'calendar':
+        return <RaceCalendar />;
       default:
         return <CircuitList />;
     }
@@ -48,22 +45,17 @@ const App = () => {
         >
           3D Visualization
         </button>
+        <button
+          className={activeTab === 'calendar' ? 'active' : ''}
+          onClick={() => setActiveTab('calendar')}
+        >
+          Race Calendar
+        </button>
       </div>
       <div className="content">{renderContent()}</div>
       <footer>Powered by F1 Insights</footer>
     </div>
   );
 };
-=======
-import React from 'react';
-import CircuitList from './components/CircuitList';
-import './App.css';
-
-const App = () => (
-  <div className="App">
-    <CircuitList />
-  </div>
-);
->>>>>>> origin/main
 
 export default App;

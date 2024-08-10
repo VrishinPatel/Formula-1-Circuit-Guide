@@ -32,7 +32,9 @@ const CircuitList = () => {
     <div className="circuit-list">
       {selectedCircuit ? (
         <div className="circuit-detail">
-          <button onClick={handleBackClick} className="back-button">Back to List</button>
+          <button onClick={handleBackClick} className="back-button">
+            Back to List
+          </button>
           <h2>{selectedCircuit.name}</h2>
           <p>Location: {selectedCircuit.location}</p>
           <p>Length: {selectedCircuit.length_km} km</p>
@@ -44,16 +46,26 @@ const CircuitList = () => {
           <p>Year: {selectedCircuit.lap_record.year}</p>
           <h3>History</h3>
           <p>{selectedCircuit.history}</p>
-          <img src={selectedCircuit.track_layout_url} alt={`${selectedCircuit.name} layout`} className="track-layout" />
-          {selectedCircuit.additional_images && selectedCircuit.additional_images.map((img, index) => (
-            <img key={index} src={img} alt={`${selectedCircuit.name} additional view ${index + 1}`} className="additional-image" />
-          ))}
+          <img
+            src={selectedCircuit.track_layout_url}
+            alt={`${selectedCircuit.name} layout`}
+            className="track-layout"
+          />
+          {selectedCircuit.additional_images &&
+            selectedCircuit.additional_images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`${selectedCircuit.name} additional view ${index + 1}`}
+                className="additional-image"
+              />
+            ))}
         </div>
       ) : (
         <>
           <h1>List of Circuits</h1>
           <div className="circuit-cards">
-            {circuits.map(circuit => (
+            {circuits.map((circuit) => (
               <div
                 key={circuit._id}
                 className="circuit-card"
@@ -68,7 +80,11 @@ const CircuitList = () => {
                 <p>Time: {circuit.lap_record.time}</p>
                 <p>Driver: {circuit.lap_record.driver}</p>
                 <p>Year: {circuit.lap_record.year}</p>
-                <img src={circuit.track_layout_url} alt={`${circuit.name} layout`} className="track-layout" />
+                <img
+                  src={circuit.track_layout_url}
+                  alt={`${circuit.name} layout`}
+                  className="track-layout"
+                />
               </div>
             ))}
           </div>
